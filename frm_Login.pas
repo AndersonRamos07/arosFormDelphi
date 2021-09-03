@@ -8,8 +8,8 @@ uses
 
 type
   TForm2 = class(TForm)
-    Edit1: TEdit;
-    Edit2: TEdit;
+    edit_login: TEdit;
+    edit_senha: TEdit;
     Label1: TLabel;
     sbtnEntrar: TSpeedButton;
     Label2: TLabel;
@@ -73,18 +73,31 @@ procedure TForm2.sbtnEntrarClick(Sender: TObject);
 var
   login, senha: String;
 begin
+login := edit_login.Text;
+senha := edit_senha.Text;
   if (login <> '') and (senha <> '') then
   begin
     if (login = 'supervisor') and (senha = 'admin1234') then
     begin
       showMessage('Bem vindo...');
-      Application.CreateForm(TfrmInitial, frm_Main);
+      Application.CreateForm(TfrmInitial, frmInitial);
       frmInitial.ShowModal;
-    end
-    else
-    begin
-
     end;
+    if (login <> 'supervisor') then
+    begin
+      showMessage('Informe um nome de usuário válido!');
+      edit_login.SetFocus;
+    end;
+    if (senha <> 'admin1234') then
+    begin
+      showMessage('Senha incorreta!');
+      edit_senha.SetFocus;
+    end;
+  end
+  else
+  begin
+    showMessage('Favor preencher login e senha com informações válidas!!!');
+    edit_login.SetFocus;
   end;
 
 

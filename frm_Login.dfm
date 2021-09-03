@@ -21,6 +21,7 @@ object Form2: TForm2
     Top = 182
     Width = 69
     Height = 33
+    Alignment = taCenter
     Caption = 'LOGIN'
     Color = clBtnHighlight
     Font.Charset = DEFAULT_CHARSET
@@ -51,6 +52,7 @@ object Form2: TForm2
     Top = 286
     Width = 76
     Height = 33
+    Alignment = taCenter
     Caption = 'SENHA'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindow
@@ -70,30 +72,33 @@ object Form2: TForm2
     Shape = stCircle
     OnMouseUp = fecharMouseUp
   end
-  object Edit1: TEdit
+  object edit_login: TEdit
     Left = 88
     Top = 232
     Width = 209
     Height = 41
+    Alignment = taCenter
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -27
-    Font.Name = 'Tahoma'
+    Font.Height = -20
+    Font.Name = 'Comfortaa'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
   end
-  object Edit2: TEdit
+  object edit_senha: TEdit
     Left = 88
     Top = 336
     Width = 209
     Height = 41
+    Alignment = taCenter
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -27
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    PasswordChar = '*'
     TabOrder = 1
   end
 end
