@@ -96,7 +96,7 @@ senha := edit_senha.Text;
   end
   else
   begin
-    showMessage('Favor preencher login e senha com informações válidas!!!');
+    showMessage('Favor preencher login e senha com informações válidas!');
     edit_login.SetFocus;
   end;
 
